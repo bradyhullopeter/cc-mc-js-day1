@@ -11,6 +11,7 @@
 /e2e/testresults
 /e2e/confs/SmokeTests/TestResults
 npm-debug*
+/lib
 
 # dependencies
 /node_modules

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build -- --watch",
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib --ignore spec.js,test.js",
     "test": "mocha src --require babel-polyfill --require babel-register",
     "test:coverage": "nyc mocha src"
   },
@@ -17,6 +17,7 @@
   "license": "Unlicense",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
