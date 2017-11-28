@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build -- --watch",
+    "build": "babel src --out-dir lib",
+    "test": "mocha src --require babel-polyfill --require babel-register",
+    "test:coverage": "nyc mocha src"
   },
   "repository": {
     "type": "git",
     "url": "https://tfs.mayo.edu/tfs/MayoClinic/CodeCamp/_git/cc-mc-js-day1"
   },
   "author": "Brady Hullopeter",
-  "license": "Unlicense"
+  "license": "Unlicense",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0"
+  }
 }
