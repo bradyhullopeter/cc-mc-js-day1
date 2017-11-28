@@ -13,6 +13,8 @@
 npm-debug*
 /lib
 
+.nyc_output
+
 # dependencies
 /node_modules
 

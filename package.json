@@ -7,7 +7,7 @@
     "start": "npm run build -- --watch",
     "build": "babel src --out-dir lib --ignore spec.js,test.js",
     "test": "mocha src --require babel-polyfill --require babel-register",
-    "test:coverage": "nyc mocha src"
+    "test:coverage": "nyc -- npm run test"
   },
   "repository": {
     "type": "git",
